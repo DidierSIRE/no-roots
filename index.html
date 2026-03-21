@@ -6,28 +6,18 @@
 <title>No Roots — Official EPK</title>
 
 <style>
+
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
     background:#0e0e0e;
     color:white;
-    line-height:1.6;
 }
 
 header{
     background:black;
-    padding:20px;
     text-align:center;
-    border-bottom:1px solid #333;
-}
-
-header h1{
-    margin:0;
-    letter-spacing:3px;
-}
-
-nav{
-    margin-top:10px;
+    padding:20px;
 }
 
 nav a{
@@ -38,7 +28,23 @@ nav a{
 }
 
 nav a:hover{
-    color:#bbbbbb;
+    color:#bbb;
+}
+
+/* HERO IMAGE */
+.hero{
+    background:url("groupe.jpg") center/cover no-repeat;
+    height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:8px;
 }
 
 section{
@@ -50,17 +56,26 @@ section{
 h2{
     border-bottom:1px solid #444;
     padding-bottom:10px;
-    margin-bottom:25px;
 }
 
-.hero{
+/* CONTACT */
+.contact-grid{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.contact-card{
     text-align:center;
-    padding:80px 20px;
+    max-width:260px;
 }
 
-.hero h2{
-    border:none;
-    font-size:32px;
+.contact-card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+    border:2px solid #333;
 }
 
 .button{
@@ -74,36 +89,13 @@ h2{
     border-radius:4px;
 }
 
-.button:hover{
-    background:#ccc;
-}
-
-.contact-grid{
-    display:flex;
-    gap:40px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.contact-card{
-    text-align:center;
-    max-width:250px;
-}
-
-.contact-card img{
-    width:100%;
-    border-radius:8px;
-    margin-bottom:15px;
-    border:2px solid #333;
-}
-
 footer{
     text-align:center;
     padding:30px;
     border-top:1px solid #333;
-    font-size:14px;
     color:#aaa;
 }
+
 </style>
 </head>
 
@@ -112,79 +104,74 @@ footer{
 <header>
     <h1>NO ROOTS</h1>
     <nav>
-        <a href="#about">Le Groupe</a>
+        <a href="#about">Le groupe</a>
         <a href="discographie.html">Discographie</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <h2>You Open The Way</h2>
-    <p>Rock • Composition originale • Live band</p>
+<!-- PHOTO GROUPE -->
+<div class="hero">
+    <div class="hero-content">
+        <h2>You Open The Way</h2>
+        <p>Album original — Rock indépendant</p>
 
-    <a class="button" href="discographie.html">
-        Écouter la discographie
-    </a>
-</section>
+        <a class="button" href="discographie.html">
+            Écouter l’album
+        </a>
+    </div>
+</div>
 
-<!-- ABOUT -->
+<!-- PRESENTATION -->
 <section id="about">
-    <h2>Le Groupe</h2>
 
-    <p>
-        <strong>No Roots</strong> est un projet musical original mêlant rock,
-        énergie live et compositions personnelles.
-    </p>
+<h2>Présentation</h2>
 
-    <p>
-        Le groupe développe un univers sincère et organique,
-        porté par des textes authentiques et une identité sonore
-        construite pour la scène.
-    </p>
+<p>
+No Roots est un projet musical original porté par des compositions
+personnelles mêlant rock, émotion et énergie live.
+</p>
 
-    <p>
-        L’album <em>You Open The Way</em> marque une nouvelle étape
-        artistique avec une sélection de titres destinés à la scène
-        et à la production studio professionnelle.
-    </p>
+<p>
+Après plusieurs mois de création et de production,
+le groupe prépare la sortie de l’album
+<strong>You Open The Way</strong>.
+</p>
+
+<p>
+Le projet est pensé pour la scène, la rencontre avec le public
+et la collaboration avec musiciens et professionnels.
+</p>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
 
-    <div class="contact-grid">
+<h2>Contact</h2>
 
-        <div class="contact-card">
-            <img src="Didier.jpeg" alt="Didier">
-            <h3>Didier</h3>
-            <p>
-                Composition<br>
-                Direction artistique
-            </p>
-            <p>
-                ✉ contact@no-roots.fr
-            </p>
-        </div>
+<div class="contact-grid">
 
-        <div class="contact-card">
-            <img src="Sonia.jpeg" alt="Sonia">
-            <h3>Sonia</h3>
-            <p>
-                Chant<br>
-                Communication
-            </p>
-            <p>
-                ✉ booking@no-roots.fr
-            </p>
-        </div>
+<div class="contact-card">
+<img src="Didier.jpeg" alt="Didier">
+<h3>Didier</h3>
+<p>Composition • Direction artistique</p>
+<p>contact@no-roots.fr</p>
+</div>
 
-    </div>
+<div class="contact-card">
+<img src="Sonia.jpeg" alt="Sonia">
+<h3>Sonia</h3>
+<p>Chant • Communication</p>
+<p>booking@no-roots.fr</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-    © 2026 No Roots — Electronic Press Kit
+© 2026 No Roots — Electronic Press Kit
 </footer>
 
 </body>
