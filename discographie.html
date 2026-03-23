@@ -13,7 +13,8 @@
 /* ================= VARIABLES ================= */
 
 :root{
-    --menu-height: 80px; /* hauteur EXACTE du menu */
+    --menu-height:80px;
+    --hero-height:320px;
 }
 
 /* ================= GENERAL ================= */
@@ -46,38 +47,36 @@ nav a{
     font-size:18px;
 }
 
-/* ================= HERO FIXE ================= */
+/* ================= HERO ================= */
 
 .hero{
     position:fixed;
-    top:var(--menu-height); /* parfaitement collé au menu */
-    left:0;
+    top:var(--menu-height);
+    height:var(--hero-height);
     width:100%;
     background:#0f0f0f;
     text-align:center;
-    padding:25px 20px 20px;
+    padding:20px;
     border-bottom:1px solid #222;
     z-index:2000;
 }
 
 .hero h1{
     font-family:'Playfair Display', serif;
-    letter-spacing:2px;
     margin:5px 0;
 }
 
 .hero h2{
     font-family:'Playfair Display', serif;
-    font-weight:400;
     opacity:0.8;
-    margin:5px 0 15px;
+    margin-bottom:15px;
 }
 
-/* ================= VIDEO ================= */
+/* VIDEO */
 
 .video-container{
     margin:auto;
-    max-width:800px;
+    max-width:700px;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 0 25px rgba(0,0,0,0.6);
@@ -93,21 +92,33 @@ nav a{
 .section{
     max-width:900px;
     margin:auto;
-    padding:460px 20px 80px; /* espace exact sous HERO */
+    padding:
+        calc(var(--menu-height) + var(--hero-height) + 20px)
+        20px
+        60px;
 }
+
+/* LIGNE MORCEAU */
 
 .track{
-    padding:25px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:12px 0;
     border-bottom:1px solid #333;
-    text-align:center;
-    font-size:18px;
 }
 
+.track strong{
+    font-size:17px;
+    text-align:left;
+}
+
+/* PLAYER COMPACT */
+
 audio{
-    display:block;
-    margin:15px auto 0;
-    width:100%;
-    max-width:420px;
+    width:260px;
+    height:32px;
 }
 
 /* ================= FOOTER ================= */
@@ -118,16 +129,21 @@ footer{
     color:#888;
 }
 
-/* ================= RESPONSIVE ORDI ================= */
+/* ================= MOBILE ================= */
 
-@media (min-width:900px){
+@media (max-width:700px){
 
-.video-container{
-    max-width:520px;
+.track{
+    flex-direction:column;
+    gap:8px;
 }
 
-.section{
-    padding-top:400px;
+audio{
+    width:100%;
+}
+
+:root{
+    --hero-height:360px;
 }
 
 }
@@ -161,71 +177,28 @@ footer{
 <!-- TRACKLIST -->
 <div class="section">
 
-<div class="track"><strong>01 — Don’t play with me</strong>
-<audio controls src="01-Dont-play-with-me.mp3"></audio></div>
-
-<div class="track"><strong>02 — Imperfection is perfection</strong>
-<audio controls src="02-Imperfection-is-perfection.mp3"></audio></div>
-
-<div class="track"><strong>03 — Enough as you are</strong>
-<audio controls src="03-Enough-as-you-are.mp3"></audio></div>
-
-<div class="track"><strong>04 — Behind the noïse</strong>
-<audio controls src="04-Behind-the-noise.mp3"></audio></div>
-
-<div class="track"><strong>05 — Teach me now</strong>
-<audio controls src="05-Teach-me-now.mp3"></audio></div>
-
-<div class="track"><strong>06 — Right on time</strong>
-<audio controls src="06-Right-on-time.mp3"></audio></div>
-
-<div class="track"><strong>07 — Master of our life</strong>
-<audio controls src="07-Master-of-our-life.mp3"></audio></div>
-
-<div class="track"><strong>08 — Peace begins with me</strong>
-<audio controls src="08-Peace-begins-with-me.mp3"></audio></div>
-
-<div class="track"><strong>09 — Breaking free</strong>
-<audio controls src="09-Breaking-free.mp3"></audio></div>
-
-<div class="track"><strong>10 — Walk with me</strong>
-<audio controls src="10-Walk-with-me.mp3"></audio></div>
-
-<div class="track"><strong>11 — Until we meet again</strong>
-<audio controls src="11-Until-we-meet-again.mp3"></audio></div>
-
-<div class="track"><strong>12 — My dream</strong>
-<audio controls src="12-My-dream.mp3"></audio></div>
-
-<div class="track"><strong>13 — Meant for you</strong>
-<audio controls src="13-Meant-for-you.mp3"></audio></div>
-
-<div class="track"><strong>14 — My perfect stubborn one</strong>
-<audio controls src="14-My-perfect-stubborn-one.mp3"></audio></div>
-
-<div class="track"><strong>15 — Two paths, one journey</strong>
-<audio controls src="15-Two-paths-one-journey.mp3"></audio></div>
-
-<div class="track"><strong>16 — Gravity of us</strong>
-<audio controls src="16-Gravity-of-us.mp3"></audio></div>
-
-<div class="track"><strong>17 — Three little suns</strong>
-<audio controls src="17-Three-little-suns.mp3"></audio></div>
-
-<div class="track"><strong>18 — Little woman full of life</strong>
-<audio controls src="18-Little-woman-full-of-life.mp3"></audio></div>
-
-<div class="track"><strong>19 — Dance with me</strong>
-<audio controls src="19-Dance-with-me.mp3"></audio></div>
-
-<div class="track"><strong>20 — Little sister</strong>
-<audio controls src="20-Little-sister.mp3"></audio></div>
-
-<div class="track"><strong>21 — You are free</strong>
-<audio controls src="21-You-are-free.mp3"></audio></div>
-
-<div class="track"><strong>22 — You open the way</strong>
-<audio controls src="22-You-open-the-way.mp3"></audio></div>
+<div class="track"><strong>01 — Don’t play with me</strong><audio controls src="01-Dont-play-with-me.mp3"></audio></div>
+<div class="track"><strong>02 — Imperfection is perfection</strong><audio controls src="02-Imperfection-is-perfection.mp3"></audio></div>
+<div class="track"><strong>03 — Enough as you are</strong><audio controls src="03-Enough-as-you-are.mp3"></audio></div>
+<div class="track"><strong>04 — Behind the noïse</strong><audio controls src="04-Behind-the-noise.mp3"></audio></div>
+<div class="track"><strong>05 — Teach me now</strong><audio controls src="05-Teach-me-now.mp3"></audio></div>
+<div class="track"><strong>06 — Right on time</strong><audio controls src="06-Right-on-time.mp3"></audio></div>
+<div class="track"><strong>07 — Master of our life</strong><audio controls src="07-Master-of-our-life.mp3"></audio></div>
+<div class="track"><strong>08 — Peace begins with me</strong><audio controls src="08-Peace-begins-with-me.mp3"></audio></div>
+<div class="track"><strong>09 — Breaking free</strong><audio controls src="09-Breaking-free.mp3"></audio></div>
+<div class="track"><strong>10 — Walk with me</strong><audio controls src="10-Walk-with-me.mp3"></audio></div>
+<div class="track"><strong>11 — Until we meet again</strong><audio controls src="11-Until-we-meet-again.mp3"></audio></div>
+<div class="track"><strong>12 — My dream</strong><audio controls src="12-My-dream.mp3"></audio></div>
+<div class="track"><strong>13 — Meant for you</strong><audio controls src="13-Meant-for-you.mp3"></audio></div>
+<div class="track"><strong>14 — My perfect stubborn one</strong><audio controls src="14-My-perfect-stubborn-one.mp3"></audio></div>
+<div class="track"><strong>15 — Two paths, one journey</strong><audio controls src="15-Two-paths-one-journey.mp3"></audio></div>
+<div class="track"><strong>16 — Gravity of us</strong><audio controls src="16-Gravity-of-us.mp3"></audio></div>
+<div class="track"><strong>17 — Three little suns</strong><audio controls src="17-Three-little-suns.mp3"></audio></div>
+<div class="track"><strong>18 — Little woman full of life</strong><audio controls src="18-Little-woman-full-of-life.mp3"></audio></div>
+<div class="track"><strong>19 — Dance with me</strong><audio controls src="19-Dance-with-me.mp3"></audio></div>
+<div class="track"><strong>20 — Little sister</strong><audio controls src="20-Little-sister.mp3"></audio></div>
+<div class="track"><strong>21 — You are free</strong><audio controls src="21-You-are-free.mp3"></audio></div>
+<div class="track"><strong>22 — You open the way</strong><audio controls src="22-You-open-the-way.mp3"></audio></div>
 
 </div>
 
