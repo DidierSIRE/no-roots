@@ -17,12 +17,6 @@ body{
     font-family:'Montserrat', sans-serif;
 }
 
-h1,h2{
-    font-family:'Playfair Display', serif;
-    text-align:center;
-    letter-spacing:2px;
-}
-
 /* NAVIGATION */
 
 nav{
@@ -41,39 +35,40 @@ nav a{
     margin:0 20px;
 }
 
-/* SECTION */
+/* HERO VIDEO */
+
+.hero{
+    margin-top:60px;
+    text-align:center;
+    padding:40px 20px 20px;
+}
+
+.hero h1,
+.hero h2{
+    font-family:'Playfair Display', serif;
+    letter-spacing:2px;
+}
+
+.video-container{
+    margin:30px auto;
+    max-width:800px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+.video-container video{
+    width:100%;
+    display:block;
+}
+
+/* SECTION TRACKS */
 
 .section{
     max-width:900px;
     margin:auto;
-    padding:100px 20px 60px;
+    padding:40px 20px 60px;
 }
-
-/* VIDEO HERO FIXE */
-
-.hero{
-    position:sticky;
-    top:70px;
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.video-wrapper{
-    position:relative;
-    max-width:700px;
-    margin:20px auto;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-.video-wrapper video{
-    width:100%;
-    height:auto;
-    opacity:0.55;
-    filter:brightness(70%);
-}
-
-/* TRACKS */
 
 .track{
     padding:25px 0;
@@ -101,29 +96,29 @@ footer{
 
 <body>
 
+<!-- MENU -->
 <nav>
 <a href="index.html">Accueil</a>
 <a href="discographie.html">Discographie</a>
 <a href="index.html#contact">Contact</a>
 </nav>
 
-<div class="section">
+<!-- HERO VIDEO -->
+<section class="hero">
 
 <h1>Discographie</h1>
-
-<div class="hero">
-
 <h2>You Open the Way — Album</h2>
 
-<div class="video-wrapper">
+<div class="video-container">
 <video autoplay muted loop playsinline>
-<source src="vidéo-no-roots.mp4" type="video/mp4">
+<source src="video-no-roots.mp4" type="video/mp4">
 </video>
 </div>
 
-</div>
+</section>
 
 <!-- TRACKLIST -->
+<div class="section">
 
 <div class="track"><strong>01 — Don’t play with me</strong>
 <audio controls><source src="01-Dont-play-with-me.mp3" type="audio/mpeg"></audio></div>
