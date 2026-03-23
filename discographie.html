@@ -10,6 +10,14 @@
 
 <style>
 
+/* ================= VARIABLES ================= */
+
+:root{
+    --menu-height: 80px; /* hauteur EXACTE du menu */
+}
+
+/* ================= GENERAL ================= */
+
 body{
     margin:0;
     background:#0f0f0f;
@@ -23,30 +31,33 @@ nav{
     position:fixed;
     top:0;
     width:100%;
+    height:var(--menu-height);
     background:black;
-    padding:15px;
-    text-align:center;
-    z-index:2000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:3000;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 20px;
+    margin:0 25px;
+    font-size:18px;
 }
 
-/* ================= HERO FIXE TOTAL ================= */
+/* ================= HERO FIXE ================= */
 
 .hero{
     position:fixed;
-    top:60px;
+    top:var(--menu-height); /* parfaitement collé au menu */
     left:0;
     width:100%;
     background:#0f0f0f;
     text-align:center;
     padding:25px 20px 20px;
     border-bottom:1px solid #222;
-    z-index:1500;
+    z-index:2000;
 }
 
 .hero h1{
@@ -79,11 +90,10 @@ nav a{
 
 /* ================= TRACKLIST ================= */
 
-/* IMPORTANT : on pousse la liste SOUS le HERO */
 .section{
     max-width:900px;
     margin:auto;
-    padding:420px 20px 80px; /* espace réservé au bloc fixe */
+    padding:460px 20px 80px; /* espace exact sous HERO */
 }
 
 .track{
@@ -113,12 +123,11 @@ footer{
 @media (min-width:900px){
 
 .video-container{
-    max-width:520px; /* vidéo plus petite PC */
+    max-width:520px;
 }
 
-/* espace ajusté pour écran ordinateur */
 .section{
-    padding-top:360px;
+    padding-top:400px;
 }
 
 }
@@ -135,7 +144,7 @@ footer{
 <a href="index.html#contact">Contact</a>
 </nav>
 
-<!-- HERO FIXE -->
+<!-- HERO -->
 <section class="hero">
 
 <h1>Discographie</h1>
