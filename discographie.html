@@ -14,7 +14,7 @@
 
 :root{
     --menu-height:80px;
-    --hero-height:320px;
+    --hero-height:300px;
 }
 
 /* ================= GENERAL ================= */
@@ -47,7 +47,7 @@ nav a{
     font-size:18px;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO FIXE ================= */
 
 .hero{
     position:fixed;
@@ -56,9 +56,13 @@ nav a{
     width:100%;
     background:#0f0f0f;
     text-align:center;
-    padding:20px;
     border-bottom:1px solid #222;
     z-index:2000;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .hero h1{
@@ -69,22 +73,24 @@ nav a{
 .hero h2{
     font-family:'Playfair Display', serif;
     opacity:0.8;
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
-/* VIDEO */
+/* VIDEO CONTENUE DANS HERO */
 
 .video-container{
-    margin:auto;
-    max-width:700px;
-    border-radius:10px;
+    width:90%;
+    max-width:600px;
+    max-height:170px;
     overflow:hidden;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
 .video-container video{
     width:100%;
-    display:block;
+    height:100%;
+    object-fit:cover;
 }
 
 /* ================= TRACKLIST ================= */
@@ -98,8 +104,6 @@ nav a{
         60px;
 }
 
-/* LIGNE MORCEAU */
-
 .track{
     display:flex;
     align-items:center;
@@ -111,7 +115,6 @@ nav a{
 
 .track strong{
     font-size:17px;
-    text-align:left;
 }
 
 /* PLAYER COMPACT */
@@ -133,6 +136,10 @@ footer{
 
 @media (max-width:700px){
 
+:root{
+    --hero-height:340px;
+}
+
 .track{
     flex-direction:column;
     gap:8px;
@@ -142,8 +149,8 @@ audio{
     width:100%;
 }
 
-:root{
-    --hero-height:360px;
+.video-container{
+    max-height:200px;
 }
 
 }
