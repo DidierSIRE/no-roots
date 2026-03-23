@@ -17,7 +17,7 @@ body{
     font-family:'Montserrat', sans-serif;
 }
 
-/* MENU */
+/* ================= MENU ================= */
 
 nav{
     position:fixed;
@@ -33,9 +33,10 @@ nav a{
     color:white;
     text-decoration:none;
     margin:0 20px;
+    font-weight:300;
 }
 
-/* HERO STICKY */
+/* ================= HERO FIXE ================= */
 
 .hero{
     position:sticky;
@@ -43,21 +44,27 @@ nav a{
     background:#0f0f0f;
     z-index:900;
     text-align:center;
-    padding:25px 20px 15px;
+    padding:30px 20px 20px;
     border-bottom:1px solid #222;
 }
 
-.hero h1,
-.hero h2{
+.hero h1{
     font-family:'Playfair Display', serif;
     letter-spacing:2px;
-    margin:8px 0;
+    margin:5px 0;
 }
 
-/* VIDEO */
+.hero h2{
+    font-family:'Playfair Display', serif;
+    font-weight:400;
+    opacity:0.8;
+    margin:5px 0 15px;
+}
+
+/* ================= VIDEO ================= */
 
 .video-container{
-    margin:15px auto;
+    margin:auto;
     max-width:800px;
     border-radius:10px;
     overflow:hidden;
@@ -69,18 +76,19 @@ nav a{
     display:block;
 }
 
-/* TRACKLIST */
+/* ================= TRACKLIST ================= */
 
 .section{
     max-width:900px;
     margin:auto;
-    padding:40px 20px 60px;
+    padding:40px 20px 80px;
 }
 
 .track{
     padding:25px 0;
     border-bottom:1px solid #333;
     text-align:center;
+    font-size:18px;
 }
 
 audio{
@@ -90,37 +98,38 @@ audio{
     max-width:420px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
-    padding:30px;
-    color:#999;
+    padding:40px;
+    color:#888;
+    font-size:14px;
 }
 
-/* =========================
-   RESPONSIVE ORDINATEUR
-   ========================= */
+/* ================= RESPONSIVE ORDI ================= */
 
-@media (min-width: 900px){
+@media (min-width:900px){
 
-    .hero{
-        padding:15px 20px 10px;
-    }
+.hero{
+    padding:20px 20px 15px;
+}
 
-    .hero h1{
-        font-size:28px;
-    }
+.hero h1{
+    font-size:28px;
+}
 
-    .hero h2{
-        font-size:18px;
-        opacity:0.8;
-    }
+.hero h2{
+    font-size:18px;
+}
 
-    .video-container{
-        max-width:520px; /* vidéo plus petite sur ordi */
-        margin:10px auto;
-    }
+.video-container{
+    max-width:520px; /* vidéo réduite PC */
+}
+
+.section{
+    padding-top:50px;
+}
 
 }
 
@@ -136,7 +145,7 @@ footer{
 <a href="index.html#contact">Contact</a>
 </nav>
 
-<!-- HERO VIDEO FIXE -->
+<!-- HERO FIXE -->
 <section class="hero">
 
 <h1>Discographie</h1>
@@ -154,70 +163,70 @@ footer{
 <div class="section">
 
 <div class="track"><strong>01 — Don’t play with me</strong>
-<audio controls><source src="01-Dont-play-with-me.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="01-Dont-play-with-me.mp3"></audio></div>
 
 <div class="track"><strong>02 — Imperfection is perfection</strong>
-<audio controls><source src="02-Imperfection-is-perfection.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="02-Imperfection-is-perfection.mp3"></audio></div>
 
 <div class="track"><strong>03 — Enough as you are</strong>
-<audio controls><source src="03-Enough-as-you-are.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="03-Enough-as-you-are.mp3"></audio></div>
 
 <div class="track"><strong>04 — Behind the noïse</strong>
-<audio controls><source src="04-Behind-the-noise.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="04-Behind-the-noise.mp3"></audio></div>
 
 <div class="track"><strong>05 — Teach me now</strong>
-<audio controls><source src="05-Teach-me-now.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="05-Teach-me-now.mp3"></audio></div>
 
 <div class="track"><strong>06 — Right on time</strong>
-<audio controls><source src="06-Right-on-time.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="06-Right-on-time.mp3"></audio></div>
 
 <div class="track"><strong>07 — Master of our life</strong>
-<audio controls><source src="07-Master-of-our-life.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="07-Master-of-our-life.mp3"></audio></div>
 
 <div class="track"><strong>08 — Peace begins with me</strong>
-<audio controls><source src="08-Peace-begins-with-me.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="08-Peace-begins-with-me.mp3"></audio></div>
 
 <div class="track"><strong>09 — Breaking free</strong>
-<audio controls><source src="09-Breaking-free.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="09-Breaking-free.mp3"></audio></div>
 
 <div class="track"><strong>10 — Walk with me</strong>
-<audio controls><source src="10-Walk-with-me.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="10-Walk-with-me.mp3"></audio></div>
 
 <div class="track"><strong>11 — Until we meet again</strong>
-<audio controls><source src="11-Until-we-meet-again.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="11-Until-we-meet-again.mp3"></audio></div>
 
 <div class="track"><strong>12 — My dream</strong>
-<audio controls><source src="12-My-dream.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="12-My-dream.mp3"></audio></div>
 
 <div class="track"><strong>13 — Meant for you</strong>
-<audio controls><source src="13-Meant-for-you.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="13-Meant-for-you.mp3"></audio></div>
 
 <div class="track"><strong>14 — My perfect stubborn one</strong>
-<audio controls><source src="14-My-perfect-stubborn-one.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="14-My-perfect-stubborn-one.mp3"></audio></div>
 
 <div class="track"><strong>15 — Two paths, one journey</strong>
-<audio controls><source src="15-Two-paths-one-journey.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="15-Two-paths-one-journey.mp3"></audio></div>
 
 <div class="track"><strong>16 — Gravity of us</strong>
-<audio controls><source src="16-Gravity-of-us.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="16-Gravity-of-us.mp3"></audio></div>
 
 <div class="track"><strong>17 — Three little suns</strong>
-<audio controls><source src="17-Three-little-suns.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="17-Three-little-suns.mp3"></audio></div>
 
 <div class="track"><strong>18 — Little woman full of life</strong>
-<audio controls><source src="18-Little-woman-full-of-life.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="18-Little-woman-full-of-life.mp3"></audio></div>
 
 <div class="track"><strong>19 — Dance with me</strong>
-<audio controls><source src="19-Dance-with-me.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="19-Dance-with-me.mp3"></audio></div>
 
 <div class="track"><strong>20 — Little sister</strong>
-<audio controls><source src="20-Little-sister.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="20-Little-sister.mp3"></audio></div>
 
 <div class="track"><strong>21 — You are free</strong>
-<audio controls><source src="21-You-are-free.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="21-You-are-free.mp3"></audio></div>
 
 <div class="track"><strong>22 — You open the way</strong>
-<audio controls><source src="22-You-open-the-way.mp3" type="audio/mpeg"></audio></div>
+<audio controls src="22-You-open-the-way.mp3"></audio></div>
 
 </div>
 
@@ -229,14 +238,14 @@ NO ROOTS — Soul Pop-Rock | Programmation 2026
 const players = document.querySelectorAll("audio");
 
 players.forEach(player => {
-    player.addEventListener("play", () => {
-        players.forEach(other => {
-            if(other !== player){
-                other.pause();
-                other.currentTime = 0;
-            }
-        });
+  player.addEventListener("play", () => {
+    players.forEach(other => {
+      if(other !== player){
+        other.pause();
+        other.currentTime = 0;
+      }
     });
+  });
 });
 </script>
 
