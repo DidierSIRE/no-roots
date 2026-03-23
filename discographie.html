@@ -26,26 +26,27 @@ nav{
     background:black;
     padding:15px;
     text-align:center;
-    z-index:1000;
+    z-index:2000;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     margin:0 20px;
-    font-weight:300;
 }
 
-/* ================= HERO FIXE ================= */
+/* ================= HERO FIXE TOTAL ================= */
 
 .hero{
-    position:sticky;
+    position:fixed;
     top:60px;
+    left:0;
+    width:100%;
     background:#0f0f0f;
-    z-index:900;
     text-align:center;
-    padding:30px 20px 20px;
+    padding:25px 20px 20px;
     border-bottom:1px solid #222;
+    z-index:1500;
 }
 
 .hero h1{
@@ -78,10 +79,11 @@ nav a{
 
 /* ================= TRACKLIST ================= */
 
+/* IMPORTANT : on pousse la liste SOUS le HERO */
 .section{
     max-width:900px;
     margin:auto;
-    padding:40px 20px 80px;
+    padding:420px 20px 80px; /* espace réservé au bloc fixe */
 }
 
 .track{
@@ -104,31 +106,19 @@ footer{
     text-align:center;
     padding:40px;
     color:#888;
-    font-size:14px;
 }
 
 /* ================= RESPONSIVE ORDI ================= */
 
 @media (min-width:900px){
 
-.hero{
-    padding:20px 20px 15px;
-}
-
-.hero h1{
-    font-size:28px;
-}
-
-.hero h2{
-    font-size:18px;
-}
-
 .video-container{
-    max-width:520px; /* vidéo réduite PC */
+    max-width:520px; /* vidéo plus petite PC */
 }
 
+/* espace ajusté pour écran ordinateur */
 .section{
-    padding-top:50px;
+    padding-top:360px;
 }
 
 }
